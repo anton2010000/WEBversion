@@ -16,7 +16,10 @@ function App() {
   useEffect(() => {
     if (cart.length) {
       window.Telegram?.WebApp.MainButton.setText(
-        `В корзине: ${(cart.reduce((sum, item) => (sum += item.count)), 0)}`
+        `В корзине: ${(cart.reduce((sum, item) => {
+          sum += item.count;
+          return sum
+        }), 0)}`
       );
       if (!window.Telegram?.WebApp.MainButton.isVisible)
         window.Telegram?.WebApp.MainButton.show();
