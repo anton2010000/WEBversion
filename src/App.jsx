@@ -27,11 +27,10 @@ function App() {
       if (window.Telegram?.WebApp.MainButton.isVisible)
         window.Telegram?.WebApp.MainButton.hide();
     }
-  }, [cart]);
 
-  useEffect(() => {
+    window.Telegram?.WebApp.MainButton.offClick(sendCartData);
     window.Telegram?.WebApp.MainButton.onClick(sendCartData);
-  }, []);
+  }, [cart]);
 
   const sendCartData = () => {
     window.Telegram?.WebApp.sendData(JSON.stringify(cart));
