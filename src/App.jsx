@@ -29,9 +29,11 @@ function App() {
     }
   }, [cart]);
 
-  window.Telegram?.WebApp.MainButton.onClick(() => {
-    window.Telegram?.WebApp.sendData(JSON.stringify(cart));
-  });
+  useEffect(() => {
+    window.Telegram?.WebApp.MainButton.onClick(() => {
+      window.Telegram?.WebApp.sendData(JSON.stringify(cart));
+    });
+  }, []);
 
   return (
     <main>
