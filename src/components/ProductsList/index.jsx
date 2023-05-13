@@ -100,7 +100,7 @@ export default function ProductsList({ cart = [], addToCart = () => {} }) {
           {products.map((product, index) => (
             <div
               key={product.id}
-              className="group relative bg-secondary-bg-color rounded-md overflow-hidden"
+              className="group relative bg-bg-color rounded-md overflow-hidden"
             >
               <div className="min-h-80 aspect-h-1 aspect-w-1 w-full lg:aspect-none lg:h-80">
                 <img

@@ -29,6 +29,10 @@ function App() {
     }
   }, [cart]);
 
+  window.Telegram?.WebApp.MainButton.onClick(() => {
+    window.Telegram?.WebApp.sendData(JSON.stringify(cart));
+  });
+
   return (
     <main>
       <ProductsList addToCart={addToCart} cart={cart} />
