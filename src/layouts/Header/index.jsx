@@ -14,6 +14,7 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
+import { Link } from "react-router-dom";
 
 const callsToAction = [
   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
@@ -44,15 +45,24 @@ export default function Header() {
           </button>
         </div>
         <Popover.Group className="hidden mx-auto lg:flex lg:gap-x-12">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link
+            to="/"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             Главная
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link
+            to="/catalog"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             Каталог
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link
+            to="/about"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
             О нас
-          </a>
+          </Link>
         </Popover.Group>
       </nav>
       <Dialog
@@ -76,24 +86,24 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6 text-center">
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Главная
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/catalog"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Каталог
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   О нас
-                </a>
+                </Link>
               </div>
             </div>
           </div>

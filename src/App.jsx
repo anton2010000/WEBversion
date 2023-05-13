@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import ProductsList from "./components/ProductsList";
-import Header from "./components/Header";
+import Header from "./layouts/Header";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -39,7 +40,7 @@ function App() {
   return (
     <main>
       <Header />
-      <ProductsList addToCart={addToCart} cart={cart} />
+      <Outlet />
     </main>
   );
 }
