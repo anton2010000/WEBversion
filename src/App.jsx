@@ -33,7 +33,7 @@ function App() {
     window.Telegram?.WebApp.MainButton.onClick(() => {
       window.Telegram?.WebApp.sendData(JSON.stringify([...cart]));
     });
-  });
+  }, []);
 
   return (
     <main>
