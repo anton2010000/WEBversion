@@ -100,16 +100,16 @@ export default function ProductsList({ cart = [], addToCart = () => {} }) {
           {products.map((product, index) => (
             <div
               key={product.id}
-              className="group relative bg-secondary-bg-color"
+              className="group relative bg-secondary-bg-color rounded-md"
             >
-              <div className="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80">
+              <div className="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-200 lg:aspect-none lg:h-80">
                 <img
                   src={product.imageSrc}
                   alt={product.imageAlt}
                   className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />
               </div>
-              <div className="mt-4 flex justify-between">
+              <div className="mt-4 flex justify-between p-2">
                 <div>
                   <h3 className="text-sm text-text-color">{product.name}</h3>
                   <p className="mt-1 text-sm text-hint-color">
@@ -120,7 +120,7 @@ export default function ProductsList({ cart = [], addToCart = () => {} }) {
                 <button
                   type="button"
                   onClick={() => onClickAdd(product.id)}
-                  className="w-16 text-button-text-color bg-button-color text-button-text-color focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+                  className="w-16 text-button-text-color bg-button-color text-button-text-color focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5"
                 >
                   {cart.find((item) => item.product.id == product.id) ? (
                     <CheckIcon className="h-5 mx-auto" />
