@@ -6,80 +6,70 @@ const products = [
     id: 1,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
+    price: 35,
     color: "Black",
   },
   {
     id: 2,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
+    price: 35,
     color: "Black",
   },
   {
     id: 3,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
+    price: 35,
     color: "Black",
   },
   {
     id: 4,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
+    price: 35,
     color: "Black",
   },
   {
     id: 5,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
+    price: 35,
     color: "Black",
   },
   {
     id: 6,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
+    price: 35,
     color: "Black",
   },
   {
     id: 7,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
+    price: 35,
     color: "Black",
   },
   {
     id: 8,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
+    price: 35,
     color: "Black",
   },
   {
     id: 9,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
+    price: 35,
     color: "Black",
   },
   {
     id: 10,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
+    price: 35,
     color: "Black",
   },
 ];
@@ -125,7 +115,7 @@ export default function ProductsList({ cart = [], addToCart = () => {} }) {
                   {cart.find((item) => item.product.id == product.id) ? (
                     <CheckIcon className="h-5 mx-auto" />
                   ) : (
-                    product.price
+                    "$" + product.price
                   )}
                 </button>
               </div>
