@@ -102,11 +102,11 @@ export default function ProductsList({ cart = [], addToCart = () => {} }) {
               key={product.id}
               className="group relative bg-secondary-bg-color rounded-md"
             >
-              <div className="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-200 lg:aspect-none lg:h-80">
+              <div className="min-h-80 aspect-h-1 aspect-w-1 w-full lg:aspect-none lg:h-80">
                 <img
                   src={product.imageSrc}
                   alt={product.imageAlt}
-                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full overflow-hidden"
                 />
               </div>
               <div className="mt-4 flex justify-between p-2">
