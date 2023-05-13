@@ -30,10 +30,12 @@ function App() {
   }, [cart]);
 
   useEffect(() => {
-    window.Telegram?.WebApp.MainButton.onClick(() => {
-      window.Telegram?.WebApp.sendData(JSON.stringify(cart));
-    });
+    window.Telegram?.WebApp.MainButton.onClick(sendCartData);
   }, []);
+
+  const sendCartData = () => {
+    window.Telegram?.WebApp.sendData(JSON.stringify(cart));
+  };
 
   return (
     <main>
