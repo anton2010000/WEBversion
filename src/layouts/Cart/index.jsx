@@ -27,7 +27,7 @@ export default function Cart({ cart = [], onCartRemove }) {
     <>
       <button
         type="button"
-        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 relative"
+        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-link-color relative"
         onClick={() => setOpen(true)}
       >
         <span className="sr-only">Open cart</span>
@@ -65,7 +65,7 @@ export default function Cart({ cart = [], onCartRemove }) {
                   leaveTo="translate-x-full"
                 >
                   <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
-                    <div className="flex h-full flex-col bg-white shadow-xl">
+                    <div className="flex h-full flex-col bg-bg-color shadow-xl">
                       <div className="flex flex-col flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                         <div className="flex items-start justify-between">
                           <Dialog.Title className="text-lg font-medium text-gray-900">
