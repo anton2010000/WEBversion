@@ -2,7 +2,7 @@ import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 const AboutPage = () => {
   const defaultState = {
-    center: [55.751574, 37.573856],
+    center: [61.787805, 34.334178],
     zoom: 15,
   };
 
@@ -15,7 +15,7 @@ const AboutPage = () => {
         <p className="text-center">Самый лучший магазин</p>
       </div>
       <Map width={"100%"} height={"300px"} defaultState={defaultState}>
-        <Placemark geometry={[55.751574, 37.573856]} />
+        <Placemark geometry={[61.787805, 34.334178]} />
       </Map>
     </YMaps>
   );
