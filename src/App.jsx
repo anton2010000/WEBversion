@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import Header from "./layouts/Header";
 import { Outlet } from "react-router-dom";
@@ -41,7 +41,7 @@ function App() {
   const sendDataToTelegram = useCallback(() => {
     window.Telegram?.WebApp.sendData(cart);
   }, [cart]);
-
+  
   useEffect(() => {
     window.Telegram?.WebApp.MainButton.onClick(sendDataToTelegram);
     return () => {
