@@ -141,7 +141,7 @@ export default function Cart({ cart = [], onCartRemove }) {
                         )}
 
                         {cart.length == 0 && (
-                          <div className="flex justify-center items-center grow">
+                          <div className="flex justify-center items-center grow text-text-color">
                             В корзине ничего нет
                           </div>
                         )}

@@ -1,7 +1,7 @@
 export const MainPage = () => {
   return (
-    <>
-      <h1>Главная страница</h1>
-    </>
+    <div className="text-text-color">
+      <h1 className="mx-auto">Главная страница</h1>
+    </div>
   );
 };
