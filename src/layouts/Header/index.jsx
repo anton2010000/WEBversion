@@ -3,6 +3,7 @@ import { Dialog, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, useLocation } from "react-router-dom";
 import Cart from "../Cart";
+import Logo from "../../components/Logo";
 
 export default function Header({ cart, onCartRemove }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,6 +17,12 @@ export default function Header({ cart, onCartRemove }) {
         className="mx-auto flex max-w-7xl items-center justify-end p-6 lg:px-8 gap-6"
         aria-label="Global"
       >
+        <Link
+          to="/"
+          className="absolute left-1/2 transform -translate-x-1/2 lg:static lg:-translate-x-0"
+        >
+          <Logo />
+        </Link>
         <Popover.Group className="hidden mx-auto lg:flex lg:gap-x-12">
           <Link
             to="/"

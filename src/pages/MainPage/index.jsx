@@ -1,7 +1,7 @@
-export const MainPage = () => {
-  return (
-    <div className="text-text-color">
-      <h1 className="mx-auto">Главная страница</h1>
-    </div>
-  );
+import Hero from "../../components/Hero";
+
+const MainPage = () => {
+  return <Hero />;
 };
+
+export default MainPage;
