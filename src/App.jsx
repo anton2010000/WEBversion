@@ -6,12 +6,16 @@ import { Outlet } from "react-router-dom";
 function App() {
   const [cart, setCart] = useState([]);
 
+  let cartVar = cart;
+
   const addToCart = (product) => {
     const index = cart.findIndex((item) => item.product.id == product.id);
     if (index >= 0) {
       cart[index].count++;
       setCart([...cart]);
     } else setCart([...cart, { count: 1, product }]);
+
+    cartVar = cart;
   };
 
   const removeFromCart = (productId) => {
@@ -20,6 +24,8 @@ function App() {
       cart.splice(index, 1);
       setCart([...cart]);
     }
+
+    cartVar = cart;
   };
 
   useEffect(() => {
@@ -40,7 +46,7 @@ function App() {
 
   useEffect(() => {
     window.Telegram?.WebApp.MainButton.onClick(() => {
-      window.Telegram?.WebApp.sendData(JSON.stringify([...cart]));
+      window.Telegram?.WebApp.sendData(JSON.stringify(cartVar));
     });
   }, []);
 
