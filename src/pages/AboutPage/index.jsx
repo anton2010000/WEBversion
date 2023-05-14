@@ -12,7 +12,7 @@ const AboutPage = () => {
         <h1 className="text-center text-2xl font-bold tracking-tight text-text-color">
           О нас
         </h1>
-        <p className="text-center">Самый лучший магазин</p>
+        <p className="text-center">Мы находимся в городе Петрозавосдк, по адресу суоярвская 5</p>
       </div>
       <Map width={"100%"} height={"300px"} defaultState={defaultState}>
         <Placemark geometry={[61.787805, 34.334178]} />
