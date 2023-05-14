@@ -11,7 +11,7 @@ export default function Header({ cart, onCartRemove }) {
   useEffect(() => setMobileMenuOpen(false), [location]);
 
   return (
-    <header className="bg-color">
+    <header className="bg-bg-color">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-end p-6 lg:px-8 gap-6"
         aria-label="Global"
@@ -44,7 +44,7 @@ export default function Header({ cart, onCartRemove }) {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6 text-color" aria-hidden="true" />
+            <Bars3Icon className="h-6 w-6 text-link-color" aria-hidden="true" />
           </button>
         </div>
       </nav>
@@ -55,7 +55,7 @@ export default function Header({ cart, onCartRemove }) {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-bg-color px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-end">
             <button
               type="button"

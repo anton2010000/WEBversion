@@ -33,7 +33,7 @@ export default function Cart({ cart = [], onCartRemove }) {
         <span className="sr-only">Open cart</span>
         <ShoppingBagIcon className="h-6 w-6" aria-hidden="true" />
         {cart.length > 0 && (
-          <div className="flex items-center justify-center absolute top-0 right-0 h-5 w-5 rounded-xl bg-rose-500 text-sm/[8px] text-white">
+          <div className="flex items-center justify-center absolute top-0 right-0 h-5 w-5 rounded-xl bg-rose-500 text-sm/[8px] text-text-color">
             {count}
           </div>
         )}
@@ -68,13 +68,13 @@ export default function Cart({ cart = [], onCartRemove }) {
                     <div className="flex h-full flex-col bg-bg-color shadow-xl">
                       <div className="flex flex-col flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                         <div className="flex items-start justify-between">
-                          <Dialog.Title className="text-lg font-medium text-gray-900">
+                          <Dialog.Title className="text-lg font-medium text-text-color">
                             Корзина
                           </Dialog.Title>
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
-                              className="-m-2 p-2 text-gray-400 hover:text-gray-500"
+                              className="-m-2 p-2 text-link-color"
                               onClick={() => setOpen(false)}
                             >
                               <span className="sr-only">Close panel</span>
@@ -105,18 +105,18 @@ export default function Cart({ cart = [], onCartRemove }) {
 
                                     <div className="ml-4 flex flex-1 flex-col">
                                       <div>
-                                        <div className="flex justify-between text-base font-medium text-gray-900">
+                                        <div className="flex justify-between text-base font-medium text-text-color">
                                           <h3>{product.name}</h3>
                                           <p className="ml-4">
                                             {product.price}
                                           </p>
                                         </div>
-                                        <p className="mt-1 text-sm text-gray-500">
+                                        <p className="mt-1 text-sm text-text-color">
                                           {product.color}
                                         </p>
                                       </div>
                                       <div className="flex flex-1 items-end justify-between text-sm">
-                                        <p className="text-gray-500">
+                                        <p className="text-text-color">
                                           Qty {count}
                                         </p>
 
@@ -126,7 +126,7 @@ export default function Cart({ cart = [], onCartRemove }) {
                                               onCartRemove(product.id)
                                             }
                                             type="button"
-                                            className="font-medium text-indigo-600 hover:text-indigo-500"
+                                            className="font-medium text-link-color"
                                           >
                                             Remove
                                           </button>
@@ -148,7 +148,7 @@ export default function Cart({ cart = [], onCartRemove }) {
                       </div>
 
                       <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-                        <div className="flex justify-between text-base font-medium text-gray-900">
+                        <div className="flex justify-between text-base font-medium text-text-color">
                           <p>Итого</p>
                           <p>${total}</p>
                         </div>
