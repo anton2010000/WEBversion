@@ -113,12 +113,12 @@ export default function Catalog() {
                 <button
                   type="button"
                   onClick={() => onClickAdd(product.id)}
-                  className="w-16 text-button-text-color bg-button-color text-button-text-color focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5"
+                  className="w-16 flex justify-center text-button-text-color bg-button-color text-button-text-color focus:outline-none font-medium rounded-lg text-sm py-2.5"
                 >
                   {cart.find((item) => item.product.id == product.id) ? (
                     <CheckIcon className="h-5 mx-auto" />
                   ) : (
-                    product.price + "р"
+                    product.price + " руб"
                   )}
                 </button>
               </div>
