@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import ProductsList from "./components/ProductsList";
 import Header from "./layouts/Header";
 import { Outlet } from "react-router-dom";
 
@@ -13,6 +12,14 @@ function App() {
       cart[index].count++;
       setCart([...cart]);
     } else setCart([...cart, { count: 1, product }]);
+  };
+
+  const removeFromCart = (productId) => {
+    const index = cart.findIndex((item) => item.product.id == productId);
+    if (index >= 0) {
+      cart.splice(index, 1);
+      setCart([...cart]);
+    }
   };
 
   useEffect(() => {
@@ -39,8 +46,8 @@ function App() {
 
   return (
     <main>
-      <Header />
-      <Outlet />
+      <Header cart={cart} onCartRemove={removeFromCart} />
+      <Outlet context={[cart, addToCart]} />
     </main>
   );
 }

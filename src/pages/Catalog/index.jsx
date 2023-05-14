@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CheckIcon } from "@heroicons/react/24/solid";
+import { useOutletContext } from "react-router-dom";
 
 const products = [
   {
@@ -74,7 +75,9 @@ const products = [
   },
 ];
 
-export default function ProductsList({ cart = [], addToCart = () => {} }) {
+export default function Catalog() {
+  const [cart, addToCart] = useOutletContext();
+
   const onClickAdd = (productId) => {
     addToCart(products.find((item) => item.id == productId));
   };
