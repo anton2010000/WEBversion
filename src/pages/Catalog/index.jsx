@@ -14,63 +14,63 @@ const products = [
     id: 2,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    price: 35,
+    price: 1000,
     color: "Black",
   },
   {
     id: 3,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    price: 35,
+    price: 1000,
     color: "Black",
   },
   {
     id: 4,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    price: 35,
+    price: 1000,
     color: "Black",
   },
   {
     id: 5,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    price: 35,
+    price: 1000,
     color: "Black",
   },
   {
     id: 6,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    price: 35,
+    price: 1000,
     color: "Black",
   },
   {
     id: 7,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    price: 35,
+    price: 1000,
     color: "Black",
   },
   {
     id: 8,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    price: 35,
+    price: 1000,
     color: "Black",
   },
   {
     id: 9,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    price: 35,
+    price: 1000,
     color: "Black",
   },
   {
     id: 10,
     name: "Basic Tee",
     imageSrc: "uploads/product.jpeg",
-    price: 35,
+    price: 1000,
     color: "Black",
   },
 ];
@@ -118,7 +118,7 @@ export default function Catalog() {
                   {cart.find((item) => item.product.id == product.id) ? (
                     <CheckIcon className="h-5 mx-auto" />
                   ) : (
-                    "$" + product.price
+                    product.price + "р"
                   )}
                 </button>
               </div>
