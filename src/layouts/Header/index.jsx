@@ -11,7 +11,7 @@ export default function Header({ cart, onCartRemove }) {
   useEffect(() => setMobileMenuOpen(false), [location]);
 
   return (
-    <header className="bg-white">
+    <header className="bg-color">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-end p-6 lg:px-8 gap-6"
         aria-label="Global"
@@ -19,19 +19,19 @@ export default function Header({ cart, onCartRemove }) {
         <Popover.Group className="hidden mx-auto lg:flex lg:gap-x-12">
           <Link
             to="/"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 link-color"
           >
             Главная
           </Link>
           <Link
             to="/catalog"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 link-color"
           >
             Каталог
           </Link>
           <Link
             to="/about"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 link-color"
           >
             О нас
           </Link>
@@ -40,7 +40,7 @@ export default function Header({ cart, onCartRemove }) {
         <div className="flex gap-6 lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 link-color"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -59,7 +59,7 @@ export default function Header({ cart, onCartRemove }) {
           <div className="flex items-center justify-end">
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5 link-color"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -71,19 +71,19 @@ export default function Header({ cart, onCartRemove }) {
               <div className="space-y-2 py-6 text-center">
                 <Link
                   to="/"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 link-color"
                 >
                   Главная
                 </Link>
                 <Link
                   to="/catalog"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 link-color"
                 >
                   Каталог
                 </Link>
                 <Link
                   to="/about"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 link-color"
                 >
                   О нас
                 </Link>
