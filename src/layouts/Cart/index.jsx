@@ -108,7 +108,7 @@ export default function Cart({ cart = [], onCartRemove }) {
                                         <div className="flex justify-between text-base font-medium text-text-color">
                                           <h3>{product.name}</h3>
                                           <p className="ml-4">
-                                            {product.price}
+                                            {product.price} руб
                                           </p>
                                         </div>
                                         <p className="mt-1 text-sm text-text-color">
@@ -117,7 +117,7 @@ export default function Cart({ cart = [], onCartRemove }) {
                                       </div>
                                       <div className="flex flex-1 items-end justify-between text-sm">
                                         <p className="text-text-color">
-                                          Qty {count}
+                                          Количество: {count}
                                         </p>
 
                                         <div className="flex">
@@ -128,7 +128,7 @@ export default function Cart({ cart = [], onCartRemove }) {
                                             type="button"
                                             className="font-medium text-link-color"
                                           >
-                                            Remove
+                                            Удалить
                                           </button>
                                         </div>
                                       </div>
@@ -150,7 +150,7 @@ export default function Cart({ cart = [], onCartRemove }) {
                       <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                         <div className="flex justify-between text-base font-medium text-text-color">
                           <p>Итого</p>
-                          <p>${total}</p>
+                          <p>{total} руб</p>
                         </div>
                       </div>
                     </div>
