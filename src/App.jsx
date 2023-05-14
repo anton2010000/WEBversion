@@ -38,13 +38,16 @@ function App() {
     }
   }, [cart]);
 
-  useEffect(() => {
-    window.Telegram?.WebApp.MainButton.onClick(sendCartData);
-  }, []);
+  const sendDataToTelegram = useCallback(() => {
+    window.Telegram?.WebApp.sendData(cart);
+  }, [cart]);
 
-  const sendCartData = () => {
-    window.Telegram?.WebApp.sendData(JSON.stringify(cart));
-  };
+  useEffect(() => {
+    window.Telegram?.WebApp.MainButton.onClick(sendDataToTelegram);
+    return () => {
+      window.Telegram?.WebApp.MainButton.offClick(sendDataToTelegram);
+    };
+  }, [sendDataToTelegram]);
 
   return (
     <main>
