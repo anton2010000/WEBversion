@@ -40,7 +40,7 @@ function App() {
 
   const sendDataToTelegram = useCallback(() => {
     const prices = cart.map((item) => ({
-      label: `${item.product.name} X ${item.count}`,
+      label: `${item.product.name} x ${item.count}`,
       amount: item.count * item.product.price * 100,
     }));
     window.Telegram?.WebApp.sendData(JSON.stringify(prices));
