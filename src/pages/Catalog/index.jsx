@@ -5,7 +5,7 @@ import { useOutletContext } from "react-router-dom";
 const products = [
   {
     id: 1,
-    name: "Basic Tee 1",
+    name: "t-short",
     imageSrc: "uploads/product.jpeg",
     price: 35,
     color: "Black",
