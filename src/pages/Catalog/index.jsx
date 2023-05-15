@@ -7,7 +7,7 @@ const products = [
     id: 1,
     name: "t-short",
     imageSrc: "uploads/product.jpeg",
-    price: 36,
+    price: 100,
     color: "Black",
   },
   {
@@ -49,7 +49,7 @@ const products = [
     id: 7,
     name: "Basic Tee 7",
     imageSrc: "uploads/product.jpeg",
-    price: 40,
+    price: 170,
     color: "Black",
   },
   {
