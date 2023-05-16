@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     if (cart.length) {
       window.Telegram?.WebApp.MainButton.setText(
-        `В корзине: ${cart.reduce((sum, item) => {
+        `Перейти к оплате, товаров: ${cart.reduce((sum, item) => {
           sum += item.count;
           return sum;
         }, 0)}`
